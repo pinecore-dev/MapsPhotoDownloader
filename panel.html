@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="panel.css">
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <span class="dot"></span>
+      <div>
+        <strong>Maps Photo Downloader</strong>
+        <small id="version"></small>
+      </div>
+      <label class="lang-picker">
+        <span id="flag">🇪🇸</span>
+        <select id="language" aria-label="Idioma">
+          <option value="es">Español</option>
+          <option value="en">English</option>
+          <option value="pt">Português</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+        </select>
+      </label>
+    </div>
+    <h1 id="place"></h1>
+    <div class="sub">
+      <span id="count"></span>
+      <span id="selected"></span>
+    </div>
+  </header>
+
+  <section class="actions">
+    <button id="all" data-i18n="all"></button>
+    <button id="none" data-i18n="none"></button>
+    <button id="clear" data-i18n="clear"></button>
+  </section>
+
+  <main>
+    <p class="tip" data-i18n-html="tip"></p>
+    <div id="empty" class="empty"></div>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <footer>
+    <div class="legal">
+      <strong data-i18n="legalTitle"></strong>
+      <p data-i18n="legal"></p>
+    </div>
+    <label class="consent">
+      <input id="authorized" type="checkbox">
+      <span data-i18n="consent"></span>
+    </label>
+    <button id="download" class="primary" disabled></button>
+    <div id="status" role="status"></div>
+    <a class="donate" href="https://www.paypal.com/donate/?hosted_button_id=NPRTCB56NQFTS" target="_blank" rel="noopener" data-i18n="donate"></a>
+  </footer>
+
+  <dialog id="viewer">
+    <div class="viewer-head">
+      <strong data-i18n="detailTitle"></strong>
+      <button id="closeViewer" aria-label="Cerrar">✕</button>
+    </div>
+    <img id="viewerImg" alt="">
+    <div id="viewerInfo" class="viewer-info"></div>
+    <div class="viewer-actions">
+      <button id="viewerSelect"></button>
+      <a id="viewerOpen" data-i18n="openImage" target="_blank" rel="noopener"></a>
+    </div>
+  </dialog>
+
+  <script src="i18n.js"></script>
+  <script src="panel.js"></script>
+</body>
+</html>
